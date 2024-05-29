@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Clínica Oftalmológica:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Clínica_Oftalmológica_jar</output-path>
+    <root id="archive" name="Clínica Oftalmológica.jar">
+      <element id="module-output" name="Clínica Oftalmológica" />
+    </root>
+  </artifact>
+</component>
