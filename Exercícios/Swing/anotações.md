@@ -1,4 +1,4 @@
-Guia simples para referência rápida ao usar a interface Swing em Java para criar componentes como botões, text fields, labels, tabelas, etc. Vamos organizar isso de maneira estruturada para facilitar a consulta:
+Guia de referência utilização do Swing:
 
 ---
 
@@ -6,7 +6,7 @@ Guia simples para referência rápida ao usar a interface Swing em Java para cri
 
 #### 1. **Configuração Básica da Janela Principal**
 
-Para criar uma janela principal (`JFrame`):
+Para criar uma janela principal (`JFrame`) e definir seu título:
 
 ```java
 JFrame frame = new JFrame("Título da Janela");
@@ -28,6 +28,8 @@ panel.setLayout(new BorderLayout()); // Exemplo de BorderLayout, pode ser GridLa
 
 ##### 3.1. **Label (Rótulo)**
 
+Para criar um rótulo (texto descritivo):
+
 ```java
 JLabel label = new JLabel("Texto do Rótulo");
 panel.add(label, BorderLayout.NORTH); // Adiciona o rótulo ao painel, BorderLayout.NORTH é um exemplo
@@ -35,19 +37,28 @@ panel.add(label, BorderLayout.NORTH); // Adiciona o rótulo ao painel, BorderLay
 
 ##### 3.2. **TextField (Campo de Texto)**
 
+Para criar um campo de texto onde o usuário pode inserir texto:
+
 ```java
 JTextField textField = new JTextField(20); // 20 é o número de colunas visíveis
 panel.add(textField, BorderLayout.CENTER); // Adiciona o campo de texto ao painel
 ```
 
-##### 3.3. **Button (Botão)**
+##### 3.3. **TextArea (Área de Texto)**
+
+Para criar uma área de texto multi-linhas:
 
 ```java
-JButton button = new JButton("Texto do Botão");
-panel.add(button, BorderLayout.SOUTH); // Adiciona o botão ao painel, BorderLayout.SOUTH é um exemplo
+JTextArea textArea = new JTextArea(5, 30); // 5 é o número de linhas visíveis, 30 é o número de colunas visíveis
+textArea.setLineWrap(true); // Habilita quebra automática de linha
+textArea.setWrapStyleWord(true); // Habilita quebra de palavra
+JScrollPane scrollPane = new JScrollPane(textArea); // Adiciona a área de texto a um JScrollPane
+panel.add(scrollPane, BorderLayout.CENTER); // Adiciona o JScrollPane ao painel
 ```
 
 ##### 3.4. **CheckBox (Caixa de Seleção)**
+
+Para criar uma caixa de seleção (checkbox):
 
 ```java
 JCheckBox checkBox = new JCheckBox("Texto da Caixa de Seleção");
@@ -57,6 +68,8 @@ panel.add(checkBox, BorderLayout.WEST); // Adiciona a caixa de seleção ao pain
 #### 4. **Eventos**
 
 ##### 4.1. **ActionListener para Botão**
+
+Para lidar com eventos de clique em um botão:
 
 ```java
 button.addActionListener(new ActionListener() {
@@ -71,6 +84,8 @@ button.addActionListener(new ActionListener() {
 
 ##### 5.1. **Definição de Colunas e Modelo**
 
+Para criar e preencher uma tabela:
+
 ```java
 String[] columnNames = {"Coluna 1", "Coluna 2", "Coluna 3"};
 Object[][] data = {
@@ -82,6 +97,8 @@ DefaultTableModel model = new DefaultTableModel(data, columnNames);
 
 ##### 5.2. **Criar Tabela e Adicionar a JScrollPane**
 
+Para adicionar uma tabela com rolagem:
+
 ```java
 JTable table = new JTable(model);
 JScrollPane scrollPane = new JScrollPane(table);
@@ -89,6 +106,8 @@ panel.add(scrollPane, BorderLayout.CENTER); // Adiciona a tabela com rolagem ao 
 ```
 
 #### 6. **JOptionPane (Caixa de Diálogo)**
+
+Para exibir mensagens ou obter confirmações:
 
 ##### 6.1. **Mensagem de Informação**
 
@@ -109,10 +128,11 @@ if (option == JOptionPane.YES_OPTION) {
 
 #### 7. **Exibição da Janela Principal**
 
+Para exibir a janela principal após configurar todos os componentes:
+
 ```java
 frame.add(panel); // Adiciona o painel à janela principal
 frame.setVisible(true); // Torna a janela visível
 ```
 
 ---
-
