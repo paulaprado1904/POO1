@@ -116,4 +116,3 @@ frame.setVisible(true); // Torna a janela visível
 
 ---
 
-Este guia oferece uma visão geral dos passos básicos e exemplos de código para criar e gerenciar interfaces gráficas usando Swing em Java. Utilize-o como referência rápida ao desenvolver aplicações com interface gráfica.
