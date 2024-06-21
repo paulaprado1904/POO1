@@ -1,4 +1,4 @@
-Claro! Abaixo você encontrará um guia simples para referência rápida ao usar a interface Swing em Java para criar componentes como botões, text fields, labels, tabelas, etc. Vamos organizar isso de maneira estruturada para facilitar a consulta:
+Guia simples para referência rápida ao usar a interface Swing em Java para criar componentes como botões, text fields, labels, tabelas, etc. Vamos organizar isso de maneira estruturada para facilitar a consulta:
 
 ---
 
